@@ -4,8 +4,12 @@ This is a spike project of a simple game using [Quil](https://github.com/quil/qu
 
 To Run with Leiningen
 ---
+```
 lein run
+```
 
 To Run from the REPL
 ---
+```
 (doSketch)
+```
