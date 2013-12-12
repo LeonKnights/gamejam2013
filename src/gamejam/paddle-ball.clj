@@ -51,7 +51,8 @@
   (rect (- (mouse-x) paddle) (- (height) 10) (* 2 paddle), 10)
   (fill 0)
   (text (str "Hit: " @hit) 10 10)
-  (text (str "Miss: " @miss) 10 20))
+(text (str "Miss: " @miss) 10 20)
+(text (str (int (current-frame-rate))) 10 30))
 
 
 (defsketch bouncey-paddle-balley

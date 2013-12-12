@@ -12,7 +12,7 @@ gamejam.core=>(in-ns 'gamejam.paddle-ball)
 
 ```
 
-Pretty much all you could easily change is the title and size. 
+Pretty much all you could easily change is the title and size.
 ```
 gamejam.paddle-ball=>(defsketch foo :title "oh look I set the title on the window, herp derp" :setup setup :draw draw :size [500 500])
 
@@ -20,3 +20,9 @@ gamejam.paddle-ball=>(defsketch foo :title "oh look I set the title on the windo
 
 This is in no way how we want to actually write our game.  But its a working example as a reference of all the things required to get a basic sketch on the screen.
 
+Update:
+paddle-ball2 is a bit closer to where I'm trying to be.
+```
+gamejam.core=>(load "paddle-ball2")
+```
+The frame rate is displayed on the screen for both examples to show that there wasn't an fps hit.
