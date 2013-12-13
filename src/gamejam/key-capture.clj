@@ -22,8 +22,9 @@
 
 (defn key-press []
         (let [big-text-size (params :big-text-size)]
-        (if (< @current-text-size big-text-size) (reset! current-text-size big-text-size))
-        (reset! (state :message) (str "Key pressed: " (raw-key)))))
+          (if (< @current-text-size big-text-size)
+            (reset! current-text-size big-text-size))
+            (reset! (state :message) (str "Key pressed: " (raw-key)))))
 
 (defsketch key-listener
   :title "Keyboard listener example"

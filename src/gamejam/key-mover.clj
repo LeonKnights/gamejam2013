@@ -26,7 +26,7 @@
   (def my-key (atom "oh hai"))
   (smooth)
   (no-stroke)
-  (no-loop))
+  #_(no-loop))
 
 (defn draw
   []
@@ -62,8 +62,10 @@
 (defn key-press []
   (let [raw-key (raw-key)
     the-key-code (key-code)
-    the-key-pressed (if (= processing.core.PConstants/CODED (int raw-key)) the-key-code raw-key)
-        move (moves (get valid-keys the-key-pressed :still))]
+        the-key-pressed (if(= processing.core.PConstants/CODED
+                              (int raw-key))
+                         the-key-code  raw-key)
+    move (moves (get valid-keys the-key-pressed :still))]
     (reset! my-key raw-key)
     (swap! blob-location (partial change-location move))
     (swap! blob-location (partial normalise (params :screen-bounds)))
