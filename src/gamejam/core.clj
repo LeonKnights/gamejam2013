@@ -17,14 +17,22 @@
         y    (random (height))]
     (ellipse x y diam diam)))
 
-(defn doSketch []
-  (defsketch example
-    :title "Window title"
-    :setup setup
-    :draw draw
-    :size [323 200]))
+
+(defn draw2 []
+  (stroke (random 255))
+  (stroke-weight (random 10))
+  (fill (random 255) (random 255) (random 255))
+
+  (let [diam (random 100)
+        x    (random (width))
+        y    (random (height))]
+    (ellipse x y diam diam)))
 
 (defn -main
-  "I don't do a whole lot ... yet."
+  "This is the main entry point for the game when it is uber-jarred"
   [& args]
-  (doSketch))
+  (sketch
+    :title "!!!MAIN GAME!!!!"
+    :setup setup
+    :draw draw2
+    :size [323 200]))
